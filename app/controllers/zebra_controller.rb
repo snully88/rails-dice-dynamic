@@ -40,7 +40,7 @@ class ZebraController < ApplicationController
     render({ :template => "game_templates/one_twenty"})
   end
   
-  def four_five
+  def five_four
     @rolls = []
 
     5.times do
