@@ -10,4 +10,7 @@ get("/dice/1/20", { :controller => "zebra", action: "one_twenty"})
 
 
 get("/dice/5/4", { :controller => "zebra", action: "five_four"}) 
+
+get("dice/:number_of_dice/:how_many_sides", :controller => "zebra", action: "dynamic")
+
 end
