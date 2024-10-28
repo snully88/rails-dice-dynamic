@@ -8,35 +8,48 @@ class ZebraController < ApplicationController
     @rolls = []
 
     2.times do
-    die = rand(1..6)
+      die = rand(1..6)
 
-    @rolls.push(die)
+      @rolls.push(die)
     end
 
-  render ({ :template => "game/templates/two_six"})
+    render({ :template => "game_templates/two_six"})
   end
 
   def two_ten
     @rolls = []
 
     2.times do
-    die = rand(1..10)
+      die = rand(1..10)
 
-    @rolls.push(die)
+      @rolls.push(die)
     end
 
-  render ({ :template => "game/templates/two_ten"})
+    render({ :template => "game_templates/two_ten"})
   end
 
   def one_twenty
     @rolls = []
 
     1.times do
-    die = rand(1..20)
+      die = rand(1..20)
 
-    @rolls.push(die)
-  end
+      @rolls.push(die)
+    end
 
-  render ({ :template => "game/templates/one_twenty"})
+    render({ :template => "game_templates/one_twenty"})
   end
   
+  def four_five
+    @rolls = []
+
+    5.times do
+      die = rand(1..4)
+
+      @rolls.push(die)
+    end
+    
+    render({ :template => "game_templates/five_four"})
+  end
+
+end
